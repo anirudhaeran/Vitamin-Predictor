@@ -57,6 +57,36 @@
   ); /* Adjust the rgba value to control the darkness */
   z-index: -1; /* Ensure it is between the image and content */
 }
+
+.body3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/contact-us-img1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -2; /* Ensure it is behind the overlay and content */
+}
+
+.body3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Adjust the rgba value to control the darkness */
+  z-index: -1; /* Ensure it is between the image and content */
+}
 nav {
   background: rgba(0, 0, 0, 0.7);
 }
@@ -86,7 +116,6 @@ nav {
   margin-right: 15px; /* Adjust the space between the icon and the text */
   float: left;
 }
-
 .img-preview > div {
   width: 100%;
   height: 100%;
@@ -130,4 +159,9 @@ input[type="file"] {
   100% {
     transform: rotate(360deg);
   }
+}
+
+#contact-form {
+  padding-left: 70px;
+  padding-top: 160px;
 }
